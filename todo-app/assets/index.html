@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced To-Do List</title>
+
+  <link rel="stylesheet" href="../styles/components.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="todo-container card">
+  <h1>📝 Advanced To-Do List</h1>
+
+  <form id="todoForm" aria-label="Add new task">
+    <input class="input" id="title" type="text" placeholder="Task title" required />
+    <input class="input" id="dueDate" type="date" required />
+    <select class="input" id="priority">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+    <button class="btn btn-primary" type="submit">Add Task</button>
+  </form>
+
+  <section class="filters">
+    <button class="btn btn-secondary" data-filter="all">All</button>
+    <button class="btn btn-secondary" data-filter="completed">Completed</button>
+    <button class="btn btn-secondary" data-filter="pending">Pending</button>
+  </section>
+
+  <ul id="todoList" aria-live="polite"></ul>
+
+  <section class="stats">
+    <p>Total: <span id="total">0</span></p>
+    <p>Completed: <span id="completed">0</span></p>
+  </section>
+</main>
+
+<div id="editModal" hidden>
+  <div class="card modal">
+    <h3>Edit Task</h3>
+    <input id="editTitle" class="input">
+    <select id="editPriority" class="input">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+    <button id="saveEdit" class="btn btn-primary">Save</button>
+    <button onclick="closeModal()" class="btn btn-secondary">Cancel</button>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

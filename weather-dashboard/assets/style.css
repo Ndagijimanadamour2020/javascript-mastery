@@ -1,0 +1,21 @@
+body {
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+}
+
+.weather-container {
+  max-width: 420px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#output img {
+  width: 80px;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .5rem;
+  margin-top: 1rem;
+  font-size: .8rem;
+}
